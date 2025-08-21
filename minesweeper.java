@@ -1,9 +1,8 @@
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Random;
 
-class Minesweeper extends Vis  {
+class Minesweeper extends Vis {
 
 	static class Cell {
 		int[] coord = new int[2];

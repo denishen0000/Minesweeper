@@ -98,6 +98,11 @@ class Vis {
         PRINT(ROUND(-2.9));
     }
 
+    /////////////////////////////////////////////////////////////////////////
+
+    // TODO mouse and key stuff
+    // TODO imgui
+
     static int MIN(int a, int b) { return Math.min(a, b); }
     static float MIN(double a, double b) { return (float) Math.min(a, b); }
     static int MAX(int a, int b) { return Math.max(a, b); }
@@ -164,7 +169,6 @@ class Vis {
         }
         System.out.println(" ]");
     }
-
 
     static Color BLACK   = new Color(  0 / 255.0,   0 / 255.0,   0 / 255.0);
     static Color BLUE    = new Color(  4 / 255.0,  51 / 255.0, 255 / 255.0);
@@ -237,12 +241,10 @@ class Vis {
     static float _canvas_get_x_World_from_x_Pixel(int x_Pixel) { return (float) ((x_Pixel / _canvas_get_Pixel_per_World_ratio()) + _canvas_left_World); }
     static float _canvas_get_y_World_from_y_Pixel(int y_Pixel) { return (float) (((_canvas_height_Pixel - y_Pixel) / _canvas_get_Pixel_per_World_ratio()) + _canvas_bottom_World); }
 
-
     static float canvasGetTop() { return _canvas_top_World; }
     static float canvasGetBottom() { return _canvas_bottom_World; }
     static float canvasGetLeft() { return _canvas_left_World; }
     static float canvasGetRight() { return _canvas_right_World; }
-
 
     static Color CANVAS_CONFIG_DEFAULT_COLOR = WHITE;
     static int CANVAS_CONFIG_DEFAULT_MAX_DIMENSION_IN_PIXELS = 512;
@@ -262,6 +264,7 @@ class Vis {
 
         if (_vis_initialized) _canvasReattach();
     }
+
     static void windowSetTitle(String title) { _jFrame.setTitle(title); }
     static void _canvasReattach() {
         _buffered_image = new BufferedImage(_canvas_get_width_Pixel(), _canvas_height_Pixel, BufferedImage.TYPE_INT_ARGB);
@@ -373,7 +376,7 @@ class Vis {
             _buffered_image_graphics.drawPolygon(new int[] { Xx1, Xx2, Xx3 }, new int[] { Yy1, Yy2, Yy3 }, 3);
         }
     }
-
+    
     static void fill_circle(double x, double y, double r) { _draw_circle(x, y, r, false); }
     static void outline_circle(double x, double y, double r) { _draw_circle(x, y, r, true); }
     static void _draw_circle(double x, double y, double r, boolean outlined) {
@@ -387,7 +390,6 @@ class Vis {
             _buffered_image_graphics.drawOval(arg1, arg2, arg3, arg4);
         }
     }
-
 
     static BufferedImage _buffered_image;
     static Graphics _buffered_image_graphics;
@@ -492,6 +494,13 @@ class Vis {
         // return !(_keyHeld[CONTROL] && _keyPressed['Q']);
         return true;
     }
+
+    static void drawString(String string, double x, double y, Color color, int fontSize) {
+        _draw_set_color(color);
+        _buffered_image_graphics.setFont(new Font(Font.MONOSPACED, Font.PLAIN, fontSize)); 
+        _buffered_image_graphics.drawString(string, _xPIXELfromWORLD(x), _yPIXELfromWORLD(y));
+    }
+}
 
 class VisJPanelExtender extends JPanel {
     private static final long serialVersionUID = 1L;
