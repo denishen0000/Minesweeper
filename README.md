@@ -68,7 +68,8 @@ java Minesweeper
 <img width="992" height="991" alt="image" src="https://github.com/user-attachments/assets/7ab850a4-93bc-44f9-bcb3-50305ec58567" />
 
 **Gameplay**
-<img width="993" height="995" alt="image" src="https://github.com/user-attachments/assets/e50344d3-92b8-499f-9bc8-1e2fca6dbf3a" />
+<img width="996" height="990" alt="image" src="https://github.com/user-attachments/assets/ccf781e7-ce08-42e1-91b9-ba558f4172c7" />
+
 
 ## Acknowledgements
 
