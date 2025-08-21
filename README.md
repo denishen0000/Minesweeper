@@ -7,10 +7,9 @@ A simple console-based Minesweeper game implemented in Java. The goal is to clea
 ## Features
 
 - **Console-based Interface**: Play directly in your terminal.
-- **Difficulty Levels**: Easy, Medium, and Hard modes are implemented to make the gameplay for varibale.
+- **Difficulty Levels**: Easy, Medium, and Hard modes are implemented to make the gameplay more varibale.
 - **Automatic Mine Placement**: Mines are randomly placed each game. For convenience, the first cell clicked is **never a bomb**.
 - **Adjacency Calculation**: Numbers indicate how many mines are adjacent to a cell as in the well-known Minesweeper game.
-- 
 ---
 
 ## File Overview
