@@ -79,10 +79,9 @@ C . 1 1 1 .
 
 ## Acknowledgements
 
-- `Vis.java` was adapted from an external source.
+- `Vis.java` was adapted from an external source. Original Creator contact: jmb15@williams.edu
 - Inspired by classic Minesweeper implementations.
-- Thanks to contributors of original Minesweeper tutorials and projects.
-
+- Thanks to contributors of original Minesweeper game.
 ---
 
 ## License
