@@ -64,18 +64,11 @@ java Minesweeper
 
 ## Screenshots
 
-*(Optional: Add screenshots here if available)*  
+**Menu Screen**
+<img width="992" height="991" alt="image" src="https://github.com/user-attachments/assets/7ab850a4-93bc-44f9-bcb3-50305ec58567" />
 
-```
-Example terminal output:
-
-  1 2 3 4 5
-A . . 1 . .
-B . 1 * 1 .
-C . 1 1 1 .
-```
-
----
+**Gameplay**
+<img width="993" height="995" alt="image" src="https://github.com/user-attachments/assets/e50344d3-92b8-499f-9bc8-1e2fca6dbf3a" />
 
 ## Acknowledgements
 
